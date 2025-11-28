@@ -1,47 +1,50 @@
 # import module
+import pytest
+from text_processor import *
 # from file import class
 
 
 def test_capitalize_text_equal():
     """1. Assert equal - egyenlőség ellenőrzés"""
-    pass
+    assert TextProcessor().capitalize_text("alma") == "ALMA"
 
 
 def test_capitalize_text_not_equal():
     """2. Assert not equal - nem egyenlő"""
-    pass
-
+    assert TextProcessor().capitalize_text("alma") != "alma"
 
 def test_reverse_text_in():
     """3. Assert in - benne van"""
-    pass
+    assert TextProcessor.reverse_text("alma") == "amla"
 
 
 def test_reverse_text_not_in():
     """4. Assert not in - nincs benne"""
-    pass
+    assert TextProcessor.reverse_text("alma") != "alma"
 
 
 def test_count_words_isinstance():
     """5. Assert isinstance - típus ellenőrzés"""
-    pass
+    asd = TextProcessor.count_words("indul a gorog aludni")
+    assert asd == 4
+    assert isinstance(asd, int)
 
 
 def test_count_words_greater_less():
     """6. Assert >, <, >=, <= - összehasonlítás"""
-    pass
+    assert TextProcessor.count_words("indul a gorog aludni") >3 is True
 
 
 def test_count_words_empty_string():
     """7. Üres sztring bemenet ellenőrzése"""
-    pass
+    assert TextProcessor.count_words("") == 0
 
 
 def test_is_palindrome_true_false():
     """8. Assert True/False - boolean ellenőrzés"""
-    pass
+    assert TextProcessor.is_palindrome("indul a gorog aludni") == True
 
 
 def test_remove_spaces_multiple_asserts():
     """9. Több assert egy tesztben"""
-    pass
+    assert TextProcessor.remove_spaces("a b c d") == "abcd" 

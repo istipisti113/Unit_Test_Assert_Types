@@ -9,19 +9,19 @@ class TextProcessor:
             return ""
         return text.upper()
     
-    def reverse_text(self, text):
+    def reverse_text(text):
         """Szöveg megfordítása"""
         if not text:
             return ""
         return text[::-1]
     
-    def count_words(self, text):
+    def count_words(text):
         """Szavak számolása"""
         if not text:
             return 0
         return len(text.split())
     
-    def is_palindrome(self, text):
+    def is_palindrome(text):
         """Palindróma ellenőrzés (pl. "anna" -> True)"""
         if not text:
             return False
@@ -29,7 +29,7 @@ class TextProcessor:
         return cleaned == cleaned[::-1]
 
 
-    def remove_spaces(self, text):
+    def remove_spaces(text):
         """Szóközök eltávolítása"""
         if not text:
             return ""
